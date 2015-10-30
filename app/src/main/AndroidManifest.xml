@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.handsoffapp.handsoffappbeta" >
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- Additional permission for LiveSight -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" >
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.here.android.maps.appid"
+            android:value="uSV2Jg5sTtyOu2kDZtph"/>
+        <meta-data android:name="com.here.android.maps.apptoken"
+            android:value="NPoL5z7DDx0QFh2BHhtccQ"/>
+        <meta-data android:name="com.here.android.maps.license.key"
+            android:value="D9MJYqbSOzLMUQMRfwWt8bmUuDo9OCM37A+Fr00DrVFaXSU3SAphLmLV6yCB3s51vsXsoSrEdCVW5Vq6RXbXZeMe6DVgzCqaQQFk7XPti+JR6dgq5Vjg9Gz1SZQk07ym8X4eRiK3n1p6cuDZDJDnpMhE9gySjLBCeSWTTJHOpkIKZQRZwXQ4g9oF7WUD5otkk9QDUfTULkvfMBnAwuEaPmZgUQO7IQKiQirqBJlFmdNTwOCVnmsm18IaQhoxo0KxO7wW4Bo2onbNR/l4x7vLBfSoH2XJihY3eTFrBvpuZRBPGivPyHaZu/bXuT5tO9o2soRrJel3PrJSBDPKO/XQWvRko+HtB7NV5Co5VDBCv4jLAI45te87ny0pvyWodblZ/g4Ted55+D7AeWfK5hbhB1lJRE2xEoaWpFtrFjmntQFKmew4JsVl8qFxHh4hKNsR41l8GUBDN/K7D5dyNJ17Z3ylB6qBs8Fb78aGS1+1jPm7bWYzvR1vas6sbO8ZtVqPzIjBkLreuMNUFr7JtbY2QT3Ld6zcOsW6+XJToqVi3gQUhAsVd4oMNPc4jG5o75ETkIx1ybwcNQFZJESdmZKaX9HunccgZT7+jbp/57M3l3pVLd79bbkhYGGYxEWhK36QiEniXhkc62P959GCMa6NnsvjhXxis8Ya/joo5oHvvyc="/>
+
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:label="HereMapService"
+            android:process="global.Here.Map.Service.v2"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.here.android.mpa.service.MapService" >
+                </action>
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextTitle"
+            android:hint="Enter address or location name" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="Start"
+            android:id="@+id/searchButton" />
+    </LinearLayout>
+
+    <!-- Map Fragment embedded with the map object -->
+    <fragment
+        class="com.here.android.mpa.mapping.MapFragment"
+        android:id="@+id/mapfragment"
+        android:layout_width="match_parent"
+        android:layout_height="409dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="Current"
+        android:id="@+id/textViewCurrent" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="Navigation tab"
+            android:id="@+id/textViewNav" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/textViewTime" />
+    </LinearLayout>
+
+</LinearLayout>
